@@ -46,10 +46,13 @@ module.exports = {
   reporters: ['mocha', 'html', 'coverage'],
 
   coverageReporter: {
-    type: 'html',
     dir: baseDir + '/test/unit-results/coverage',
-    file: 'coverage.html'
+    reporters: [
+    {type: 'html', subdir: 'report-html'},
+    { type: 'lcov', subdir: 'report-lcov'},
+    ]
   },
+
 
   htmlReporter: {
     outputDir: baseDir + '//test/unit-results/html'
