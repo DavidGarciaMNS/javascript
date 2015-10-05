@@ -198,6 +198,39 @@ gulp.task('test:unit', ['build'], function(cb) {
   }), cb);
 });
 
+//run sonar
+gulp.task('sonar', function () {
+    var options = {
+        sonar: {
+            host: {
+                url: 'http://localhost:9000'
+            },
+            jdbc: {
+                url: 'jdbc:h2:tcp://localhost:9092/sonar',
+                username: 'sonar',
+                password: 'sonar'
+            },
+            projectKey: 'sonar:my-project:1.0.0',
+            projectName: 'My Project',
+            projectVersion: '1.0.0',
+            // comma-delimited string of source directories 
+            sources: 'app',
+            language: 'js',
+            sourceEncoding: 'UTF-8',
+            javascript: {
+                lcov: {
+                    reportPath: 'test/sonar_report/lcov.info'
+                }
+            }
+        }
+    };
+ 
+    // gulp source doesn't matter, all files are referenced in options object above 
+    return gulp.src('thisFileDoesNotExist.js', { read: false })
+        .pipe(sonar(options))
+        .on('error', util.log);
+});
+
 // Run e2e tests using protractor, make sure serve task is running.
 gulp.task('test:e2e', ['webdriver:update'], function() {
   return gulp.src(protractorConfig.config.specs)
