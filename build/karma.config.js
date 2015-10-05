@@ -42,7 +42,6 @@ module.exports = {
 
   preprocessors: {
     'app/src/*.js': 'coverage'
-    'app/src/test/*.js': 'coverage'
   },
 
   reporters: ['mocha', 'html', 'coverage','junit'],
@@ -52,6 +51,7 @@ module.exports = {
     reporters: [
     {type: 'html', subdir: 'report-html'},
     { type: 'lcov', subdir: 'report-lcov'},
+    { type: 'cobertura', subdir: 'report-cobertura'},
     ]
   },
 
