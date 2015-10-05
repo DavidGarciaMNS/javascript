@@ -23,8 +23,8 @@ module.exports = {
   //  baseDir + '/modules/**/*.js',
   //  'build/tmp/*.js',
   //  baseDir + '/modules/**/*-spec.js'*/
-     baseDir + '/**/suma.js',
-     baseDir + '/**/suma.spec.js'
+     baseDir + '/src/suma.js',
+     baseDir + '/src/suma.spec.js'
   ],
 
   //used framework
@@ -44,7 +44,7 @@ module.exports = {
     'app/**/*.js': 'coverage'
   },
 
-  reporters: ['mocha', 'html', 'coverage'],
+  reporters: ['mocha', 'html', 'coverage','junit'],
 
   coverageReporter: {
     dir: baseDir + '/test/unit-results/coverage',

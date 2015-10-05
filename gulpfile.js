@@ -214,12 +214,12 @@ gulp.task('sonar', function () {
             projectName: 'My Project',
             projectVersion: '1.0.0',
             // comma-delimited string of source directories 
-            sources: 'app',
+            sources: 'app/src',
             language: 'js',
             sourceEncoding: 'UTF-8',
             javascript: {
                 lcov: {
-                    reportPath: 'test/sonar_report/lcov.info'
+                    reportPath: '/app/test/unit-results/coverage/report-lcov-xml'
                 }
             }
         }
