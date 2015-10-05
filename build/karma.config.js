@@ -36,7 +36,8 @@ module.exports = {
     'karma-jasmine',
     'karma-coverage',
     'karma-html-reporter',
-    'karma-mocha-reporter'
+    'karma-mocha-reporter',
+    'karma-junit-reporter'
   ],
 
   preprocessors: {
@@ -53,6 +54,9 @@ module.exports = {
     ]
   },
 
+  junitReporter: {
+    outputDir: baseDir + '/test/unit-results/coverage/report-lcov-xml' 
+  },
 
   htmlReporter: {
     outputDir: baseDir + '//test/unit-results/html'
