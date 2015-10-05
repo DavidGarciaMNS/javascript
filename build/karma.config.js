@@ -24,7 +24,7 @@ module.exports = {
   //  'build/tmp/*.js',
   //  baseDir + '/modules/**/*-spec.js'*/
      baseDir + '/src/suma.js',
-     baseDir + '/src/suma.spec.js'
+     baseDir + '/src/test/suma.spec.js'
   ],
 
   //used framework
@@ -41,7 +41,8 @@ module.exports = {
   ],
 
   preprocessors: {
-    'app/**/*.js': 'coverage'
+    'app/src/*.js': 'coverage'
+    'app/src/test/*.js': 'coverage'
   },
 
   reporters: ['mocha', 'html', 'coverage','junit'],
