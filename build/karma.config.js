@@ -50,7 +50,6 @@ module.exports = {
     reporters: [
     {type: 'html', subdir: 'report-html'},
     { type: 'lcov', subdir: 'report-lcov'},
-    { type: 'xml', subdir: 'report-xml'},
     ]
   },
 
