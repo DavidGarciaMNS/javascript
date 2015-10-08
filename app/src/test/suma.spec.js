@@ -12,6 +12,6 @@ describe('prueba', function(){
     });
 
     it("multiplica 2*3", function(){
-    	expect(Multiplicacion(x,y)).toEqual(6);
+    	expect(Multiplicacion(x,y)).toEqual(5);
     });
 });
