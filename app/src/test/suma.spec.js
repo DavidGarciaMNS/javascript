@@ -4,7 +4,7 @@ describe('prueba', function(){
 
 
 	it("suma 2 + 3", function() {
-        expect(Suma(x,y)).toEqual(6);
+        expect(Suma(x,y)).toEqual(5);
     });
 
     it("resta 2 - 3", function(){
